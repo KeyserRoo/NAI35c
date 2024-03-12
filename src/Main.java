@@ -10,8 +10,6 @@ public class Main {
 		int k = scanner.nextInt();
 		if (k <= 0)
 			k = 3;
-		else if (k % 2 == 0)
-			k++;
 		String[][] test = getData("data\\iris_test.txt");
 		String[][] training = getData("data\\iris_training.txt");
 		// for (int i = 0; i < training.length; i++) {
@@ -20,37 +18,29 @@ public class Main {
 		// }
 		// System.out.println();
 		// }
-		findKNearest(test[0], training, k);
+		kNearestIndecies(test[0], training, k);
 	}
 
-	public static String[] findKNearest(String[] test, String[][] training, int k) {
-		double[] distances = new double[training.length];
+	public static int[] kNearestIndecies(String[] test, String[][] training, int k) {
+
+		double[][] distancesWithIndices = new double[training.length][2];
 		for (int i = 0; i < training.length; i++) {
-			distances[i] = euclideanDistance(test, training[i]);
+			distancesWithIndices[i][0] = euclideanDistance(test, training[i]);
+			distancesWithIndices[i][1] = i;
 		}
 
-		double[] copy = Arrays.copyOf(distances, distances.length);
-		quickSort(copy, 0, copy.length - 1);
-
-		double[] values = new double[k];
-		for (int i = 0; i < values.length; i++) {
-			values[i] = copy[i];
-		}
+		Arrays.sort(distancesWithIndices, (a, b) -> Double.compare(a[0], b[0]));
 
 		int[] closestIndecies = new int[k];
-		int index = 0;
-		for (int i = 0; i < values.length; i++) {
-			for (int j = 0; j < distances.length; j++) {
-				if (values[i] == distances[j])
-					closestIndecies[index++] = j;
-			}
+		for (int i = 0; i < k; i++) {
+			closestIndecies[i] = (int) distancesWithIndices[i][1];
 		}
 
-		for (int i = 0; i < closestIndecies.length; i++) {
-			System.out.println(closestIndecies[i]);
+		for (int i : closestIndecies) {
+			System.out.println(i);
 		}
 
-		return null;
+		return closestIndecies;
 	}
 
 	public static double euclideanDistance(String[] test, String[] trainig) {
@@ -83,30 +73,4 @@ public class Main {
 		}
 	}
 
-	public static void quickSort(double[] array, int low, int high) {
-		if (low < high) {
-			int pivotIndex = partition(array, low, high);
-			quickSort(array, low, pivotIndex - 1);
-			quickSort(array, pivotIndex + 1, high);
-		}
-	}
-
-	public static int partition(double[] array, int low, int high) {
-		double pivot = array[high];
-		int i = low - 1;
-		for (int j = low; j < high; j++) {
-			if (array[j] <= pivot) {
-				i++;
-				swap(array, i, j);
-			}
-		}
-		swap(array, i + 1, high);
-		return i + 1;
-	}
-
-	public static void swap(double[] array, int i, int j) {
-		double temp = array[i];
-		array[i] = array[j];
-		array[j] = temp;
-	}
 }
