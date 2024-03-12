@@ -12,6 +12,7 @@ public class Main {
         int k = scanner.nextInt();
         if (k <= 0)
             k = 3;
+			scanner.close();
         String[][] test = getData("data\\iris_test.txt");
         String[][] training = getData("data\\iris_training.txt");
         analyze(test, training, k);
