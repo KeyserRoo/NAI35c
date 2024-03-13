@@ -75,7 +75,7 @@ public class Main {
 		}
 	}
 
-/**
+	/**
  * Performs KNN algorithm for given files and then analyzes how successful it was
  * 
  * @param test A 2D array representing tested data, the last column represents classification
