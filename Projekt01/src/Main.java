@@ -1,10 +1,16 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
+import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.Arrays;
 
 public class Main {
 	static int _userBasedTries = 0;
@@ -12,8 +18,61 @@ public class Main {
 
 	public static void main(String[] args) {
 		String[][] test = getData("data\\iris_test.txt");
+		// String[][] test = getData("data\\cancer_test.txt");
 		String[][] training = getData("data\\iris_training.txt");
+		// String[][] training = getData("data\\cancer_training.txt");
 		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Czy chcesz przeprowadzić analizę danych z pliku?\n1: tak\n2: nie");
+		String anwser = scanner.next();
+		if (anwser.equals("tak") || anwser.equals("1")) {
+			String[] saveToFile = new String[training.length];
+			String fileName = "data\\iris_output.txt";
+			for (int i = 1; i <= training.length; i++) {
+				System.out.println("\n\nDla parametru k równego: " + i);
+				saveToFile[i - 1] = analyzeFromFile(test, training, i);
+			}
+			extractCorrectness(saveToFile, fileName);
+		}
+
+		analyzeFromUser(scanner, training);
+		scanner.close();
+	}
+
+	/**
+ * Writes an array of strings to a file.
+ *
+ * This method iterates over the provided array of strings and writes each string to a file.
+ * Each string is written on a new line in the file. If the file does not exist, it will be created.
+ *
+ * @param data An array of strings to be written to the file.
+ * @param fileName The name of the file to which the data will be written.
+ */
+	public static void extractCorrectness(String[] data, String fileName) {
+		File file = new File(fileName);
+		try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
+			for (String row : data) {
+				bw.write(row);
+				bw.newLine();
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * Interactively Analyzes KNN algorithm's performance with user-provided data.
+	 *
+	 * This method allows the user to input a new observation and its type, then
+	 * uses the KNN algorithm to classify the observation
+	 * by comparing given classification to its prediction
+	 * 
+	 * @param scanner  A Scanner object for reading user input.
+	 * @param training A 2D array containing the training dataset, used for comparisons.
+	 */
+	public static void analyzeFromUser(Scanner scanner, String[][] training) {
+
+		System.out.println("\n\nProszę podać ręcznie parametr k");
 		int k = scanner.nextInt();
 		if (k <= 0) {
 			k = 1;
@@ -23,22 +82,7 @@ public class Main {
 			k = 120;
 			System.out.println("parametr nie moze byc wiekszy od 120, ustawiono na 120");
 		}
-		analyzeFromFile(test, training, k);
-		analyzeFromUser(scanner, training, k);
-		scanner.close();
-	}
 
-	/**
- * Interactively Analyzes KNN algorithm's performance with user-provided data.
- *
- * This method allows the user to input a new observation and its type, then uses the KNN algorithm to classify the observation 
- * by comparing given classification to its prediction
- * 
- * @param scanner A Scanner object for reading user input.
- * @param training A 2D array containing the training dataset, used for comparisons.
- * @param k Parameter of how many closest neighbours to consider
- */
-	public static void analyzeFromUser(Scanner scanner, String[][] training, int k) {
 		String newPointAtributes = "";
 		String newPointType = "";
 
@@ -76,42 +120,53 @@ public class Main {
 	}
 
 	/**
- * Performs KNN algorithm for given files and then analyzes how successful it was
- * 
- * @param test A 2D array representing tested data, the last column represents classification
- * @param training A 2D array containing the training dataset
- * @param k Parameter of how many closest neighbours to consider
- */
-	public static void analyzeFromFile(String[][] test, String[][] training, int k) {
+	 * Performs KNN algorithm for given files and then analyzes how successful it
+	 * was
+	 * 
+	 * @param test     A 2D array representing tested data, the last column represents classification
+	 * @param training A 2D array containing the training dataset
+	 * @param k        Parameter of how many closest neighbours to consider
+	 */
+	public static String analyzeFromFile(String[][] test, String[][] training, int k) {
 		int comparisons = 0, successes = 0;
 		String[][] trimmedTest = trimArray(test);
 		for (int i = 0; i < trimmedTest.length; i++) {
 			String knnAnswer = getResult(kNearestIndecies(trimmedTest[i], training, k), training);
 			if (knnAnswer.equals(test[i][test[i].length - 1].trim()))
-			successes++;
+				successes++;
 			comparisons++;
 		}
 		System.out.println("Poprawnie zakwalifikowane przykłady: " + successes);
 		System.out.println("Liczba porównanych kwiatów: " + comparisons);
 		double percentage = (double) successes / comparisons * 100;
 		System.out.println("Poprawność algorytmu:  " + String.format("%.2f", percentage) + "%");
+		String toReturn = k+"\t"+successes+"\t"+comparisons+"\t"+percentage;
+		return toReturn;
 	}
 
 	/**
- * Determines how many of each species was among nearest neighbours
- *
- * This method iterates over the given indices, extracts the species name from the last column of the table,
- * and counts the occurrences of each species. It then returns the species with the highest count.
- *
- * @param indecies An array of nearest indecies.
- * @param table A 2D array where each row represents an observation and the last column contains the species name.
- * @return The species name with the highest count among the given indices.
- */
+	 * Determines how many of each species was among nearest neighbours
+	 *
+	 * This method iterates over the given indices, extracts the species name from
+	 * the last column of the table,
+	 * and counts the occurrences of each species. It then returns the species with
+	 * the highest count.
+	 *
+	 * @param indecies An array of nearest indecies.
+	 * @param table    A 2D array where each row represents an observation and the last column contains the species name.
+	 * @return The species name with the highest count among the given indices.
+	 */
 	public static String getResult(int[] indecies, String[][] table) {
+		Set<String> set = new HashSet<>();
 		HashMap<String, Integer> map = new HashMap<>();
-		map.put("Iris-setosa", 0);
-		map.put("Iris-versicolor", 0);
-		map.put("Iris-virginica", 0);
+
+		for (int i = 0; i < table.length; i++) {
+			set.add(table[i][table[i].length - 1]);
+		}
+
+		for (String item : set) {
+			map.put(item, 0);
+		}
 
 		for (int index : indecies) {
 			String key = table[index][table[0].length - 1];
@@ -129,16 +184,19 @@ public class Main {
 	}
 
 	/**
- * Calculates the indices of the k nearest observations to a given observation based on Euclidean distance.
- *
- * This method computes the Euclidean distance between the given observation and each observation in the compareToData array.
- * It then sorts these distances and returns the indices of the k observations with the smallest distances.
- *
- * @param observation The observation for which to find the nearest neighbors.
- * @param compareToData A 2D array containing the observations to compare against. Each row represents an observation.
- * @param k The number of how many nearest neighbors to find.
- * @return An array of indices representing rows from training data.
- */
+	 * Calculates the indices of the k nearest observations to a given observation
+	 * based on Euclidean distance.
+	 *
+	 * This method computes the Euclidean distance between the given observation and
+	 * each observation in the compareToData array.
+	 * It then sorts these distances and returns the indices of the k observations
+	 * with the smallest distances.
+	 *
+	 * @param observation   The observation for which to find the nearest neighbors.
+	 * @param compareToData A 2D array containing the observations to compare against. Each row represents an observation.
+	 * @param k The number of how many nearest neighbors to find.
+	 * @return An array of indices representing rows from training data.
+	 */
 	public static int[] kNearestIndecies(String[] observation, String[][] compareToData, int k) {
 
 		double[][] distancesWithIndices = new double[compareToData.length][2];
@@ -159,8 +217,7 @@ public class Main {
 
 	/**
 	 * Calculates distance using unnormalized Euclidean distance equation
-	 * d(p,q) = sqrt ( sum( pow ( qi - pi , 2
-	 * ) ) )
+	 * d(p,q) = sqrt ( sum( pow ( qi - pi , 2 ) ) )
 	 */
 	public static double euclideanDistance(String[] observation, String[] compareToData) {
 		double[] temp = new double[observation.length];
@@ -175,11 +232,11 @@ public class Main {
 	}
 
 	/**
- * Trims array, (in this case used to get rid of decision attribute)
- *
- * @param arr The original 2D array.
- * @return A new 2D array with the last column removed.
- */
+	 * Trims array, (in this case used to get rid of decision attribute)
+	 *
+	 * @param arr The original 2D array.
+	 * @return A new 2D array with the last column removed.
+	 */
 	public static String[][] trimArray(String[][] arr) {
 		int rows = arr.length;
 		int columns = arr[0].length;
@@ -194,11 +251,11 @@ public class Main {
 	}
 
 	/**
- * Trims array, (in this case used to get rid of decision attribute)
- *
- * @param filePath relative path to file
- * @return 2D string array that represents data in file, structure: rows -> columns
- */
+	 * Trims array, (in this case used to get rid of decision attribute)
+	 *
+	 * @param filePath relative path to file
+	 * @return 2D string array that represents data in file, structure: rows -> columns
+	 */
 	public static String[][] getData(String filePath) {
 		try {
 			List<String> lines = Files.readAllLines(Paths.get(filePath));
