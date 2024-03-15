@@ -1,16 +1,6 @@
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.Scanner;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.Arrays;
+import java.io.*;
+import java.util.*;
+import java.nio.file.*;
 
 public class Main {
 	static int _userBasedTries = 0;
@@ -18,9 +8,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		String[][] test = getData("data\\iris_test.txt");
-		// String[][] test = getData("data\\cancer_test.txt");
 		String[][] training = getData("data\\iris_training.txt");
-		// String[][] training = getData("data\\cancer_training.txt");
 		Scanner scanner = new Scanner(System.in);
 
 		System.out.println("Czy chcesz przeprowadzić analizę danych z pliku?\n1: tak\n2: nie");
@@ -32,7 +20,7 @@ public class Main {
 				System.out.println("\n\nDla parametru k równego: " + i);
 				saveToFile[i - 1] = analyzeFromFile(test, training, i);
 			}
-			extractCorrectness(saveToFile, fileName);
+			extractCorrectnessStats(saveToFile, fileName);
 		}
 
 		analyzeFromUser(scanner, training);
@@ -48,7 +36,7 @@ public class Main {
  * @param data An array of strings to be written to the file.
  * @param fileName The name of the file to which the data will be written.
  */
-	public static void extractCorrectness(String[] data, String fileName) {
+	public static void extractCorrectnessStats(String[] data, String fileName) {
 		File file = new File(fileName);
 		try (BufferedWriter bw = new BufferedWriter(new FileWriter(file))) {
 			for (String row : data) {
@@ -76,16 +64,20 @@ public class Main {
 		int k = scanner.nextInt();
 		if (k <= 0) {
 			k = 1;
-			System.out.println("parametr nie moze byc mniejszy od 0, ustawiono na 1");
+			System.out.println("parametr nie moze byc mniejszy od 1, ustawiono na 1");
 		}
 		if (k > training.length) {
-			k = 120;
-			System.out.println("parametr nie moze byc wiekszy od 120, ustawiono na 120");
+			k = training.length;
+			System.out.println("parametr nie moze byc wiekszy od "+training.length+", ustawiono na "+training.length);
 		}
 
 		String newPointAtributes = "";
 		String newPointType = "";
 
+		Set<String> set = new HashSet<>();
+		for (String[] item : training) 
+			set.add(item[item.length-1]);
+		
 		newPointAtributes = scanner.nextLine();
 		while (!newPointAtributes.equals("quit")) {
 			System.out.println("\n\nPodaj " + (training[0].length - 1)
@@ -97,16 +89,14 @@ public class Main {
 				System.out.println("Niepoprawne dane!\nSpróbuj jeszcze raz!");
 				continue;
 			}
-
-			System.out.println("\nPodaj numer typu kwiatu:\n1: Iris-setosa\n2: Iris-versicolor\n3: Iris-virginica");
-			switch (scanner.nextLine()) {
-				case "1", "Iris-setosa" -> newPointType = "Iris-setosa";
-				case "2", "Iris-versicolor" -> newPointType = "Iris-versicolor";
-				case "3", "Iris-virginica" -> newPointType = "Iris-virginica";
-				default -> {
-					System.out.println("Niepoprawne dane!\nSpróbuj jeszcze raz!");
+			for (String type : set) {
+				System.out.println(type);
+			}
+			String answer = scanner.nextLine();
+			if(set.contains(answer)) newPointType = answer;
+			else {
+				System.out.println("Niepoprawne dane!\nSpróbuj jeszcze raz!");
 					continue;
-				}
 			}
 
 			String knnAnswer = getResult(kNearestIndecies(userInput, training, k), training);
