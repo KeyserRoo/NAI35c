@@ -1,0 +1,28 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "editor.tokenColorCustomizations": {
+        "[Darcula IntelliJ]": {
+            "strings": "#6aab73",
+            "comments": "#6a996c",
+            "keywords": "#b96236",
+            "textMateRules": [
+                {
+                    "scope": "keyword",
+                    "settings": {
+                        "foreground": "#b96236"
+                    }
+                },
+                {
+                    "scope": "",
+                    "settings": {
+                        "foreground": "#b96236"
+                    }
+                }
+            ]
+        }
+    }
+}
