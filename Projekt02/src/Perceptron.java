@@ -1,58 +1,86 @@
 public class Perceptron {
-	private double[] weights;
+	private final double[] weights;
 	private double bias;
-	private double learningRate;
+	private final double weightsLR;
+	private final double biasLR;
 
-	public Perceptron(int numFeatures, double learningRate) {
-		this.weights = new double[numFeatures];
-		for (int i = 0; i < numFeatures; i++) {
-			this.weights[i] = Math.random() - 0.5;
-		}
-		this.bias = Math.random() - 0.5;
-		this.learningRate = learningRate;
+	public Perceptron(int numAttributes, double wlr, double blr) {
+		weights = new double[numAttributes];
+		weightsLR = wlr;
+		biasLR = blr;
+		initializeWeightsAndBias();
 	}
 
-	private int activationFunction(double sum) {
-		return sum > 0 ? 1 : 0;
-	}
-
-	public int predict(double[] features) {
-		double sum = 0;
-		for (int i = 0; i < features.length; i++) {
-			sum += features[i] * weights[i];
-		}
-		sum += bias;
-		return activationFunction(sum);
-	}
-
-	public void train(double[][] trainingData, int[] labels, int maxIterations) {
-		for (int iteration = 0; iteration < maxIterations; iteration++) {
-			boolean converged = true;
-			for (int i = 0; i < trainingData.length; i++) {
-				double[] inputs = trainingData[i];
-				int prediction = predict(inputs);
-				if (prediction != labels[i]) {
-					converged = false;
-					for (int j = 0; j < weights.length; j++) {
-						weights[j] += (labels[i] - prediction) * inputs[j] * learningRate;
-					}
-					bias += (labels[i] - prediction) * learningRate;
-				}
-			}
-			if (converged) {
-				break;
-			}
-		}
-	}
-
-	public double evaluate(double[][] testData, int[] testLabels) {
+	public void test(Data data) {
 		int correctPredictions = 0;
-		for (int i = 0; i < testData.length; i++) {
-			double[] inputs = testData[i];
-			if (predict(inputs) == testLabels[i]) {
+		int totalPredictions = 0;
+		for (int i = 0; i < data.getAttributes().length; i++) {
+			boolean isSetosa = classify(data.getAttributes()[i]);
+			totalPredictions++;
+			if ((isSetosa && data.getLabels()[i] == 1) || (!isSetosa && data.getLabels()[i] != 1))
 				correctPredictions++;
+		}
+
+		double accuracy = (double) correctPredictions / data.getAttributes().length * 100;
+		System.out.println("Number of classifications: " + totalPredictions);
+		System.out.println("Number of correctly classified examples: " + correctPredictions);
+		System.out.println("Experiment accuracy: " + accuracy + "%\n");
+	}
+
+	public void train(Data data, int limit) {
+		double accuracy;
+		int iterations = 0;
+		do {
+			iterations++;
+			trainCycle(data);
+			System.out.println("Iteration " + iterations + " completed");
+			int correctPredictions = 0;
+			for (int i = 0; i < data.getAttributes().length; i++) {
+				boolean prediction = classify(data.getAttributes()[i]);
+				if ((prediction ? 1 : 0) == data.getLabels()[i])
+					correctPredictions++;
+			}
+			accuracy = (double) correctPredictions / data.getAttributes().length * 100;
+			System.out.println("Current accuracy: " + accuracy + "%");
+		} while (accuracy < 100.0 && iterations < limit);
+		System.out.println("\nTraining completed with " + accuracy + "% accuracy after " + iterations + " iterations.");
+	}
+
+	private void trainCycle(Data data) {
+		for (int i = 0; i < data.getAttributes().length; i++) {
+			double[] attributes = data.getAttributes()[i];
+
+			int target = data.getLabels()[i];
+			int output = binaryStepFunction(weightedSum(attributes));
+
+			for (int j = 0; j < weights.length; j++) {
+				double error = target - output;
+				weights[j] += weightsLR * error * attributes[j];
 			}
 		}
-		return (double) correctPredictions / testData.length;
+	}
+
+	private boolean classify(double[] attributes) {
+		double sum = 0;
+		for (int i = 0; i < attributes.length; i++)
+			sum += attributes[i] * weights[i];
+		return sum > 0;
+	}
+
+	private double weightedSum(double[] attributes) {
+		double toReturn = 0;
+		for (int i = 0; i < attributes.length; i++)
+			toReturn += weights[i] * attributes[i];
+		return toReturn;
+	}
+
+	private void initializeWeightsAndBias() {
+		for (int i = 0; i < weights.length; i++)
+			weights[i] = Math.random() * 0.1 - 0.05;
+		bias = Math.random() * 0.1 - 0.05;
+	}
+
+	private int binaryStepFunction(double weightedSum) {
+		return (weightedSum >= 0) ? 1 : 0;
 	}
 }

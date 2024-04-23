@@ -1,0 +1,56 @@
+{
+	"java.project.sourcePaths": [
+		"src"
+	],
+	"java.project.outputPath": "bin",
+	"java.project.referencedLibraries": [
+		"lib/**/*.jar"
+	],
+	"editor.tokenColorCustomizations": {
+		"[Darcula IntelliJ]": {
+			"strings": "#6AAB73",
+			"comments": "#808080",
+			"numbers": "#6897BB",
+			"variables": "#A9B7C6",
+			"types": "#A9B7C6",
+			"textMateRules": [
+				{
+					"scope": "keyword",
+					"settings": {
+						"foreground": "#CC7832"
+					}
+				},
+				{
+					"scope": "storage.modifier.java",
+					"settings": {
+						"foreground": "#CC7832"
+					}
+				},
+				{
+					"scope": "storage.type.java",
+					"settings": {
+						"foreground": "#A9B7C6"
+					}
+				},
+				{
+					"scope": "variable.parameter.java",
+					"settings": {
+						"foreground": "#A9B7C6"
+					}
+				},
+				{
+					"scope": "storage.type.primitive.java",
+					"settings": {
+						"foreground": "#A9B7C6"
+					}
+				},
+				{
+					"scope": "meta.method.identifier.java",
+					"settings": {
+						"foreground": "#d3c96e"
+					}
+				}
+			]
+		}
+	}
+}

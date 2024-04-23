@@ -1,0 +1,202 @@
+Białe mogą wygrać partię tylko posunięciem (5) Kf5-e5. Techniczne 
+określenie tego posunięcia to “iść w OPOZYCJĘ”. Dwa króle stają w 
+opozycji, naprzeciw siebie, w jednej linii na polach tego samego koloru 
+i ten który ma teraz ruch, powodujący wyjście z opozycji -- w tym 
+przypadku czarny król -- jest zmuszony pozwolić na ruch naprzód do 
+następnej linii wrogiemu królowi. Jeżeli czarne zagrają Ke7-d7, białe 
+odpowiedzą (6) Ke5-f6, a jeżeli czarne zagrają Ke7-f7, nastąpi (6) 
+Ke5-d6. Następnie, po posunięciu czarnych Kf7-e8, białe powtórzą manewr 
+zajmując opozycję (7) Kd6-e6 i znowu czarne muszą wycofać się Ke8-d8 
+lub Ke8-f8, co pozwoli białym na zdobycie kolejnej linii posunięciem na 
+f7 lub d7. To zabezpiecza wolną drogę pionowi, który teraz bez 
+przeszkód maszeruje na pole przemiany.
+
+Ważna rola, jaką odgrywa w końcówkach pionowych opozycja króla jest 
+jeszcze jaskrawiej uwypuklona w sytuacjach, które powstałyby gdyby w 
+sytuacji przedstawionej na diagramie 15 białe zagrały (5) e4-e5 zamiast 
+Kf5-e5. Czarne mogłyby wtedy zremisować partię utrzymując opozycję dla 
+siebie. Mogłyby zagrać Ke7-f7 i mimo późniejszego (6) e5-e6, Kf7-e7; 
+(7) Kf5-e5 białe odzyskały opozycję ale nie są w stanie jej utrzymać 
+jeżeli czarne grają bezbłędnie. Posunięciem, które ratuje grę dla 
+czarnych jest Ke7-e8. Ke7-d8 lub Ke7-f8 spowodują przegraną ponieważ 
+wtedy białe mogą wejść w opozycję ruchem Ke5-d6 lub Ke5-f6. Gra w tych 
+trzech przypadkach mogłaby potoczyć się tak: A: (7) ..., Ke7-e8, (8) 
+Ke5-f6, Ke8-f8; (9) e6-e7+, Kf8-e8; (10) Kf6-e6 i mamy pat czyli 
+następuje remis. B: (7) ..., Ke7-d8; (8) Ke5-d6, Kd8-e8; (9) e6-e7 i 
+czarne muszą wykonać posunięcie Ke8-f7 pozwalające uzyskać białym 
+kontrolę nad polem przemiany poprzez (10) Kd6-d7. C: (7) ..., Ke7-f8, 
+(8) Ke5-f6, Kf8-e8, etc., podobnie do przebiegu gry w B.
+
+Podsumowując analizę tej końcówki pionowej: Decydującym czynnikiem jest 
+opozycja króli w 6 i 8 linii. Jeżeli słabszej stronie uda się uzyskać 
+opozycję z pionem na 6 linii, gra zakończy się remisem.
+
+Jeżeli pion nie doszedł jeszcze do 6 linii, opozycja króli nie jest 
+jeszcze dostępna dla słabszej strony ponieważ nadchodzący pion wytrąci 
+króla z opozycji. Załóżmy, na przykład, że król białych stoi na e6, a 
+pion na e5, podczas gdy czarny król stoi na e8 i jest teraz ruch 
+białych. Białe muszą wyjść z opozycji grając Ke6-f6 lub Ke6-d6 i czarne 
+utrzymują opozycję grając Ke8-f8 lub Ke8-d8. Ale wtedy białe mają w 
+zapasie posunięcie, które zmusza czarne do wyjścia z opozycji i w ten 
+sposób wygrywa partię. Grają e5-e6 i gra kończy się w omówiony 
+uprzednio sposób.
+
+Znajomość końcówkek typu król i pion przeciw królowi jest szczególnie 
+ważna dla każdego gracza szachowego, nie tylko dlatego, że wielka 
+liczba pozycji może zostać zredukowana do tej końcówki przez wymianę 
+wszystkich innych bierek obecnych na szachownicy, ale również dlatego, 
+że daje wgląd w specyficzne manewry, które musi wykonać król mając na 
+uwadze zdobywanie lub tracenie opozycji i które, jak będzie to dalej 
+widoczne, stanowią zasadniczą treść najczęściej spotykanych końcówek 
+pionowych.
+
+Początkującemu graczowi trudno jest uchwycić specyfikę manewrów 
+opozycyjnych, ale na szczęście ogromna większość końcówek pionowych ma 
+znacznie prostszą postać. Wygrywający manewr w tych końcówkach, w które 
+przechodzi większość gier szachowych, może być łatwo wyjaśniony, a po 
+zrozumieniu go, początkujący gracz łatwo może przyswoić fundamentalne 
+zasady stojące za każdą partią.
+
+Diagram 16 pokazuje typową pozycję, na której można studiować 
+wygrywający manewr. Białe mają przewagę piona, ale tak jak to było na 
+pozycji Diagramu 15, nie mogą przemienić przechodniego piona ponieważ 
+król stoi za nim, a nie przed nim. Z drugiej strony nie ma 
+prawdopodobnie sensu iść do przodu pionami z drugiej strony 
+szachownicy, ponieważ czarne mają tam taką samą liczbę pionów i nie ma 
+szans aby któryś z białych pionów mógł przebić się do przodu. Całkiem 
+łatwo jest poprowadzić białe ku zwycięstwu, a strategia, jaką należy 
+zastosować, będzie dobrze widoczna po następujących rozważaniach: król 
+czarnych jest znacząco ograniczony w swoich ruchach, ponieważ musi 
+nieustannie monitorować przechodniego piona białych.
+ońcówki omówione do tego momentu pokazały metodę zwycięstwa przy 
+pomocy przeważających sił i początkujący gracz może teraz zrozumieć, że 
+wiodącą zasadą przyświecającą wszystkim manewrom musi być UNIKANIE 
+STRAT MATERIAŁU -- niezależnie od tego jak niewielkich -- ponieważ 
+ostatecznie mogą doprowadzić one do przegranej partii z powodu 
+przemiany jednego piona w hetmana.
+Następnym etapem będzie odkrycie, w jakich warunkach możliwe jest 
+zdobycie przewagi materialnej i uniknięcie strat własnych. Aby 
+zrozumieć manewry ataku i obrony, przy pomocy których ten cel 
+osiągniemy, niezbędne jest najpierw zapoznanie się ze sposobami 
+współpracy różnych bierek ze sobą, zrozumienie, gdzie leży ich siła, a 
+gdzie słabość. Zanim to wszystko, przynajmniej w zarysie, nie stanie 
+się dla początkującego gracza jasne, nie będzie on w stanie rozegrać 
+sensownej partii czy nawet zrozumieć najbardziej elementarnych zasad 
+strategii.
+
+Czytelnik jest więc proszony o pilne przestudiowanie następnego 
+rozdziału, w którym omówione są charakterystyczne cechy różnych bierek. 
+W ten sposób szybciej osiągnie znaczną siłę gry, niż gdyby opierał się 
+tylko na doświadczeniu zdobytym podczas grania dużej liczby partii i 
+próbach dojścia do wszystkiego samemu. Należy korzystać z wiedzy 
+zgromadzonej przez wiele pokoleń szachistów.
+
+JAK WSPÓŁPRACUJĄ RÓŻNE BIERKI
+
+Są dwa podstawowe rodzaje ataku. Z pierwszym z nich mamy do czynienia, 
+gdy jedna bierka jednocześnie atakuje dwie lub więcej bierek 
+przeciwnika; z drugim, gdy do ataku na bierkę przeciwnika skierowanych 
+zostaje więcej bierek, niż może on zgromadzić do jej obrony. 
+Początkujący, z reguły, przeprowadza ataki wyłącznie w celu 
+wyeliminowania bierki przeciwnika; jasnym wydaje się więc, że tego 
+rodzaju ataki w większości przypadków są daremne, ponieważ pozwalają 
+atakowanej bierce przemieścić się na inne pole, być może bardziej nawet 
+dla niej korzystne. Przewaga jednoczesnego atakowania dwóch bierek jest 
+oczywista, choćby z tego względu, że prawdopodobnie tylko jedną będzie 
+można uratować. Z kolei korzyść wynikająca z atakowania większą liczbą 
+bierek niż jest ich zgromadzonych do obrony jest nie mniej oczywista, 
+ale trudniej jest taki atak przeprowadzić. Połączenie obu tych metod 
+ataku stanowi sekret udanej współpracy bierek.
+
+Na kolejnych diagramach przedstawione są proste ilustracje 
+elementarnych przypadków takich ataków. Takie pozycje często pojawiają 
+się w partiach początkujących z racji częstego ustawiania przez nich 
+bierek na niekorzystnych pozycjach. Podczas studiowania tych przypadków 
+oko początkującego zaznajomi się z tymi niebezpiecznymi formacjami 
+bierek i nauczy się przewidywać zagrożenia z nimi związane. 
+ekorzystne położenie związanej bierki bierze się stąd, że często 
+przeciwnik dla jej zaatakowania może zgromadzić więcej bierek niż można 
+zgromadzić dla jej obrony. Pozycja na diagramie 32 może służyć za 
+ilustrację. 
+
+Dwie bierki czarnych są związane - skoczek na f6 i pion na e5 i z obu 
+tych związań białe mogą odnieść dla siebie korzyści.
+
+Pion na e5 jest atakowany dwukrotnie i broniony dwukrotnie. Białe nie 
+mogą go zbić, ponieważ stracą skoczka i wieżę, a wezmą tylko skoczka i 
+piona. Ale mogą wygrać piona grając (1) d3-d4. W ten sposób atakują 
+piona po raz trzeci i mimo iż czarne mogą go obronić równierz po raz 
+trzeci wieżą na e8, taka obrona nie jest skuteczna, ponieważ czarne 
+stracą piona, skoczka i hetmana za piona, skoczka i wieżę.  
+
+Posunięcie e5-e4 w odpowiedzi na d3-d4 również na niewiele się zda; 
+ponieważ na e4 pion jest atakowany dwukrotnie, a tylko raz broniony 
+(nie można liczyć skoczka na f6, bo jest związany gońcem na g5). 
+Wszystko, czego białe muszą dokonać to najpierw wziąć skoczka na f6 i 
+dopiero wtedy zbić piona na e4. 
+
+Pozostaje ustalić czy w odpowiedzi na (1) d3-d4 czarne mogą wziąć piona 
+gońcem lub skoczkiem. Najwidoczniej jest to możliwe, ponieważ pion d4 
+jest chroniony tylko przez skoczka f3 i hetmana. Istotnie, kombinacja 
+będzie prawidłowa, jeżeli goniec na d7 będzie dostatecznie broniony. 
+Ponieważ tak nie jest, białe wygrywają figurę w następujący sposób:
+
+		(1) d3-d4         Gb6:d4
+          	(2) Sf3:d4       	Sc6:d4
+          	(3) Hd2:d4       	e5:d4
+          	(4) We1:e7       	d4:c3
+
+Do tego momentu miała miejsce wyrównana wymiana bierek, ale teraz 
+czarne tracą gońca, atakowanego przez wieżę białych, ponieważ białe 
+mogą usunąć skoczka broniącego gońca.
+
+		(5) Gg5:f6		g7:f6
+		(6) We7:d7 etc.
+
+Zamiast grać (1) d3-d4 i korzystać z przewagi jaką daje związanie piona 
+e5, białe mogą skierować swój atak przeciwko innej związanej bierce 
+czarnych, to znaczy skoczkowi na f6. Mogą grać (1) Sc3-d5, zaatakować 
+hetmana i jednocześnie po raz drugi skoczka na f6. Jak białe mogą 
+osiągnąć korzyść z tego podwójnego ataku nie będzie oczywiste dla 
+początkującego, ponieważ czarne mogą odpowiedzieć He7-d6 lub He7-d8 
+broniąc swojego skoczka również dwa razy. Rzeczywiście, białe nic nie 
+zyskują na f6, na polu, względem którego skierowane jest związanie, ale 
+wykorzystują związanie dla wymuszenia rozerwania łańcucha pionów 
+chroniących czarnego króla, poprzez wymianę na f6, zmuszając czarne do 
+odbicia pionem z g7. Przewaga pozycyjna osiągnięta dzięki przerwaniu 
+łańcucha czarnych pionów będzie omówiona dalej, podczas omawiania 
+strategii gry środkowej.
+
+
+
+POŚWIĘCENIA
+
+Mówimy, że gracz dokonuje POŚWIĘCENIA, jeżeli pozwala na zbicie pewnej 
+ilości swojego materiału nie uzyskując rekompensaty w postaci materiału 
+nieprzyjaciela. Oczywiście nikt nie będzie postępował świadomie w ten 
+sposób, jeżeli nie przewiduje uzyskania jakichś innych korzyści w 
+zamian za stratę materiału. Ta rekompensata może mieć postać przewagi 
+pozycyjnej. Ponieważ przewaga pozycyjna ma miejsce wtedy, gdy powstaje 
+możliwość dania mata lub zdobycia materiału, jasne jest, że poświęcając 
+materiał intencją gracza nigdy nie jest dawać więcej niż brać, 
+przeciwnie – oczekuje, że uzyska więcej niż straci. Innymi słowy 
+poświęcenie, prawidłowo wykonane, jest stratą tylko TYMCZASOWYĄ i 
+bardzo szybko zwraca się w postaci takiej samej ilości materiału, 
+jeżeli nie większej, lub też w postaci ataku, którego ofiarą stanie się 
+nieprzyjacielski król.
+
+Im mniej oczywisty jest sposób, w jaki gracz odzyska poświęcony 
+materiał, czy też urzeczywistni inny rodzaj przewagi, tym piękniejszy 
+wydaje się manewr poświęcenia. Jeżeli skutkiem poświęcenia jest 
+bezpośredni atak matujący na króla, nietrudno jest taki rozwój wypadków 
+przewidzieć, zakładając znajomość przez graczy typowych pozycji 
+matujących, z których wiele zostało omówionych w poprzednim rozdziale. 
+Następne diagramy pokazują przykłady poświęceń, jakie często mają 
+miejsce w rzeczywistych partiach.
+
+W pozycji przedstawionej na diagramie 33 jeżeli białe mają ruch, mogą 
+wymusić mata podobnego do tego, objaśnionego przy okazji diagramu 29 
+grając wieżą na g3. Najlepszym zabezpieczeniem przed posunięciem Wg3:g7 
+jest ruch pionem: f7-f6. Ale grający czarnymi, nie znający pozycji 
+matującej z diagramu 29, może być skłonny zagrać pionem g7-g6, a wtedy 
+białe forsują mata poświęcając hetmana na h7.

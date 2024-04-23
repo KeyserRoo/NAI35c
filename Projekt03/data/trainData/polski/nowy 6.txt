@@ -1,0 +1,157 @@
+miętanie jednego rodzaju ruchu, jak to ma miejsce w 
+większości innych gier planszowych. Wystarczy jednak tylko niewielka 
+liczba ćwiczeń praktycznych aby zapoznać się ze sposobem w jaki 
+poruszają się różne bierki szachowe, a wtedy można się przekonać, że 
+różnorodność ruchów pozwala na zadziwiającą głębię i bogactwo 
+kombinacji, co daję bardziej intensywną i głębszą satysfakcję płynącą z 
+szachów w porównaniu do jakiejkolwiek innej gry.
+
+
+Wieża
+
+
+Wieża może poruszać się do przodu, do tyłu i w boki wzdłuż prostej 
+linii nie zablokowanej przez bierkę tego samego koloru. Innymi słowy 
+może poruszać się do każdego pola rzędu czy też kolumny, na której 
+stoi, jeżeli na drodze nie stoi inna bierka tego samego koloru. Jeżeli 
+na drodze znajduje się bierka przeciwnika, to wieża może ją zbić i 
+zająć jej miejsce na szachownicy.
+
+Na przykład na diagramie 2 wieża może przesunąć się na pola e5, e6, e7, 
+e8, e3, e2, e1, f4, g4, d4 i c4. W tym ostatnim posunięciu zbije 
+czarnego gońca. Wieża nie może przemieścić się na pole h4 ponieważ 
+znajduje się tam bierka tego samego koloru, ani też nie może 
+przemieścić się na pola b4 lub a4 ponieważ nie wolno jej przeskoczyć 
+ponad gońcem. Może oczywiście przesunąć się na któreś z tych pól w 
+następnym ruchu po zbiciu gońca. 
+
+
+Goniec
+
+
+Goniec porusza się wzdłuż diagonali, to znaczy, może przesunąć się na 
+którekolwiek z pól przekątnej, na której się znajduje, chyba że, tak 
+jak w przypadku wieży, droga jest zablokowana przez bierkę tego samego 
+koloru. Jeżeli na drodze znajdzie się wroga bierka, goniec może ją 
+zbić. Tak więc, na diagramie 2, goniec może przesunąć się na pola a2, 
+b3, d5, e6, lub, zbijając skoczka, na f7. Nie może jednak przemieścić 
+się na g8, chyba, że w następnym ruchu po zbiciu skoczka. Na drugiej 
+diagonali wszystkie pola, to znaczy, f1, e2, d3, b5 i a6, są dla niego 
+dostępne.
+
+Ponieważ goniec jest ograniczony do pól tego samego koloru jak to, na 
+którym stał na początku gry, ma on dostęp tylko do 32 pól szachownicy i 
+z tego punktu widzenia wyraźnie widać, o ile silniejszą figurą jest 
+wieża, mająca dostęp do wszystkich 64 pól.
+
+
+Hetman 
+
+
+Hetman ma siłę zarówno wieży, jak i gońca, mogąc poruszać się na 
+dowolne pole linii poziomej, pionowej lub diagonali, na której się 
+znajduje, jeżeli tylko droga jest wolna. Na diagramie 2, pola, na które 
+może przemieścić się hetman to a3, b4, c5, e7, f8,
+f4, e5, c7, b8, d1, d2, d3, d4, d5, d7, d8, a6, b6, c6, e6, f6, g6 i 
+h6. Tak samo jak wieża i goniec, hetman posiada możliwość zbicia figury 
+nieprzyjaciela poprzez zajęcie jej miejsca.
+Hetman jest z pewnością najpotężniejszą figurą na szachownicy. Później 
+przekonamy się, że jego siła w przybliżeniu jest porównywalna z siłą 
+dwóch wież.
+
+
+Król
+
+
+Król, tak jak hetman, porusza się i bije w dowolnym kierunku, ale jest 
+znacznie mniej potężny, ponieważ może poruszać się tylko o jedno pole. 
+Mimo wszystko jest najważniejszą figurą ponieważ celem gracza jest 
+pojmanie króla przeciwnika.
+
+Aby nie narażać króla na przedwczesną śmierć, obowiązuje zasadą, że 
+król nie może poruszać się na pole, znajdujące się w zasięgu rażenia 
+bierki przeciwnika. Tak więc, na diagramie 2, czarny król może wykonać 
+posunięcie na pola f2, g2, h2, f3 i h3, ale nie może przejść na f4 lub 
+g4, ani też nie może zbić piona na h4, ponieważ na każdym z tych pól 
+mógłby zostać zbity przez białą wieżę. 
+
+Biały król na diagramie 2 ma tylko trzy pola, na które może się 
+przesunąć, to znaczy, b1, b2 i c2, ponieważ pola d1 i d2, mimo iż 
+znajdują się w jego zasięgu, są pod kontrolą czarnego hetmana.
+
+
+Skoczek
+
+
+Skoczek nie porusza się ani wzdłuż linii, ani diagonali, tak więc, 
+zwykle sprawia początkującemu graczowi więcej trudności niż inne 
+figury. Ruch skoczka może być najlepiej opisany jako skok na pole  
+kolejne po najbliższym, ale o innym kolorze niż to, na którym stał 
+skoczek. [Nota: Pomocnym może być rozpatrywanie ruchu skoczka jako 
+litery “L” złożonej z czterech pól - trzech w jednym kierunku i jednego 
+pod kątem prostym do nich.] Na przykład, na diagramie 2, skoczek może 
+wykonać ruch na pola d8, d6, e5, g5, h6 i h8. Przechodząc na d6, zbije 
+hetmana.
+
+Jego ruch nie ulega zablokowaniu przez bierki, czy to własne, czy 
+nieprzyjacielskie, stojące na jego drodze. To pozwala skoczkowi, jako 
+jedynej figurze, wykonać posunięcie na początku gry, jeszcze przed 
+wykonaniem ruchu pionami.
+
+Siła skoczka porównywalna jest z siłą gońca. Zasięg tego ostatniego 
+jest większy, ale skoczek ma dostęp do wszystkich pól szachownicy, 
+niezależnie od ich koloru.
+
+
+Pion
+
+
+Pozostaje jeszcze opisać ruch piona, jedynej bierki, która zbija 
+inaczej niż się porusza. Pion porusza się tylko do przodu wzdłuż linii, 
+w której stoi i tylko o jedno pole za każdym razem. Wyjątkiem jest jego 
+pierwsze posunięcie, w którym może przesunąć się o dwa pola. Tak więc 
+na diagramie 2, biały pion może przemieścić się tylko na h5, podczas 
+gdy czarny pion może przejść zarówno na g6, jak i g5.
+
+Pion zbija ukośnie, tylko do przodu i tylko o jedno pole w danym 
+posunięciu. Przywilej podwójnego ruchu w pierwszym posunięciu nie 
+dotyczy zbijania. Tak więc, na diagramie 2, biały pion mógłby zbić 
+tylko czarną bierkę na g5, czarny pion mógłby zbić tylko białą bierkę 
+na f6 lub h6, ale nie na e5. Jeżeli jakaś bierka stałaby na h5, pion z 
+h4 zostałby zablokowany. Podobnie pion z g7 byłby zablokowany bierką 
+stojącą na g6.
+
+Jest jedna szczególna zasada, którą należy zapamiętać w związku z 
+pionem. Jeżeli pion chciałby skorzystać ze swego przywileju ruchu o dwa 
+pola w celu uniknięcia bicia przez wrogiego piona, może zostać 
+zawrócony o jedno pole i zbity. Na przykład na diagramie 2, jeżeli 
+biały pion stanie na h5, a czarny pion przemieści się na g5, białe mogą 
+zawrócić czarnego piona o jedno pole i zbić go swoim pionem. Ten sposób 
+zbijania nazywa się “en passant” (francuskie określenie “w przelocie”) 
+i może być dokonany tylko przez piona, nigdy przez figurę.
+
+Na koniec należy wspomnieć o promocji (przemianie) piona w figurę. 
+Dzieje się to automatycznie kiedy pion osiągnie ostatni (pierwszy) rząd 
+szachownicy. Gracz musi wtedy zdjąć piona z szachownicy i położyć na 
+jego miejsce dowolną figurę (z wyjątkiem króla). Tak więc może się 
+zdarzyć, że gracz będzie grał trzema lub więcej wieżami, gońcami, 
+skoczkami czy hetmanami. Z tego względu, że hetman jest najsilniejszą 
+figurą, piony praktycznie zawsze promuje się do hetmana.
+
+Mimo iż pion ma względnie niewielką wartość mierzoną jego mobilnością 
+-- zasięgiem ruchu -- jest bardzo wartościową bierką, ponieważ zawsze 
+istnieje możliwość jego przemiany w hetmana.
+
+
+Roszada
+
+Tylko raz w trakcie gry wolno graczowi poruszyć dwie figury w jednym 
+ruchu. To posunięcie nazywane jest roszadą i biorą w nim  udział król 
+oraz wieża. W trakcie roszady król porusza się o dwa pola w kierunku 
+wieży, a wieża przechodzi ponad królem i staje obok niego. W pozycji na 
+diagramie 3 obaj gracze mogą wykonać roszady na dowolnym skrzydle.
+
+Białe roszując na skrzydle królewskim powinny postawić króla na g1, a 
+wieżę na f1; roszując na skrzydle hetmańskim król powinien przesunąć 
+się na pole c1, a wieża na d1. Analogicznie, czarne powinny roszować 
+przesuwając króla na g8 i wieżę na f8, lub króla na c8 i wieżę n
